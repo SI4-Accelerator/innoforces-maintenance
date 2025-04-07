@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wartungsarbeiten | Swiss Innovation Forces</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'block';
+            });
+        }
+
+        window.onload = () => {
+            const lang = navigator.language.slice(0, 2);
+            setLanguage(['de', 'en', 'fr', 'it'].includes(lang) ? lang : 'de');
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Swiss Innovation Forces Logo" class="logo">
+        </header>
+
+        <nav class="lang-selector">
+            <button onclick="setLanguage('de')">DE</button>
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('fr')">FR</button>
+            <button onclick="setLanguage('it')">IT</button>
+        </nav>
+
+        <main>
+            <div class="lang lang-de">
+                <h1>Wir sind bald zurück!</h1>
+                <p>Unsere Website befindet sich derzeit aufgrund von Wartungsarbeiten im Aufbau. Wir arbeiten intensiv daran, Ihnen bald wieder unsere Inhalte präsentieren zu können.</p>
+                <p>In der Zwischenzeit finden Sie aktuelle Informationen und Updates auf unserer LinkedIn-Seite:</p>
+                <a href="https://www.linkedin.com/company/swissinnovationforces/" class="linkedin-link">Besuchen Sie uns auf LinkedIn</a>
+            </div>
+            <div class="lang lang-en">
+                <h1>We’ll be back soon!</h1>
+                <p>Our website is currently undergoing maintenance. We're working hard to be back online shortly with updated content and features.</p>
+                <p>In the meantime, please visit our LinkedIn page for updates:</p>
+                <a href="https://www.linkedin.com/company/swissinnovationforces/" class="linkedin-link">Visit us on LinkedIn</a>
+            </div>
+            <div class="lang lang-fr">
+                <h1>Nous serons bientôt de retour !</h1>
+                <p>Notre site est actuellement en maintenance. Nous travaillons pour revenir rapidement avec de nouveaux contenus.</p>
+                <p>En attendant, retrouvez-nous sur LinkedIn :</p>
+                <a href="https://www.linkedin.com/company/swissinnovationforces/" class="linkedin-link">Visitez-nous sur LinkedIn</a>
+            </div>
+            <div class="lang lang-it">
+                <h1>Torneremo presto!</h1>
+                <p>Il nostro sito è attualmente in manutenzione. Stiamo lavorando per tornare online con nuovi contenuti il prima possibile.</p>
+                <p>Nel frattempo, seguiteci su LinkedIn:</p>
+                <a href="https://www.linkedin.com/company/swissinnovationforces/" class="linkedin-link">Visita il nostro LinkedIn</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Swiss Innovation Forces. Alle Rechte vorbehalten.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
